@@ -1310,7 +1310,7 @@
   </div>
 </section>
 
-<section class="faq-home reveal" style="padding:70px 0;background:var(--surface);border-top:1px solid var(--line);">
+<section class="faq-home" style="padding:70px 0;background:var(--surface);border-top:1px solid var(--line);">
   <div class="wrap" style="max-width:720px;">
     <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;text-align:center;margin:0 0 40px;">Preguntas frecuentes</h2>
     <div style="display:flex;flex-direction:column;">
@@ -1368,6 +1368,10 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Red de seguridad: si algo no se revela solo en 2.5s, se fuerza visible igualmente
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+  }, 2500);
 </script>
 <a href="#top" id="back-to-top" aria-label="Volver arriba" style="position:fixed;bottom:24px;right:24px;width:46px;height:46px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;box-shadow:0 6px 20px rgba(28,26,22,.25);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:50;">↑</a>
 <script>
