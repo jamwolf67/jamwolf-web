@@ -1350,22 +1350,9 @@
   </a>
   <p>Catálogo completo — actualizado julio 2026</p>
   <p style="margin-top:8px;"><a href="legal.html" style="color:inherit;text-decoration:underline;">Aviso legal · Privacidad · Condiciones</a></p>
-  <p style="margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-soft);opacity:.7;">
-    <span id="visit-count">···</span> visitas desde agosto de 2026
+  <p style="margin-top:14px;">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjamwolfbooks.com&count_bg=%239A2B1E&title_bg=%236B655C&icon=&icon_color=%23FFFFFF&title=visitas&edge_flat=true" alt="Contador de visitas" style="opacity:.75;height:20px;">
   </p>
-  <script>
-    fetch('https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjamwolfbooks.com&count_bg=%23FFFFFF00&title_bg=%23FFFFFF00&edge_flat=false')
-      .then(r => r.text())
-      .then(svg => {
-        var match = svg.match(/<text[^>]*>(\d[\d,]*)<\/text>\s*<\/g>\s*<\/g>\s*<\/svg>/);
-        var allNums = svg.match(/>([\d]{1,10})</g);
-        if (allNums && allNums.length) {
-          var last = allNums[allNums.length - 1].replace(/[><]/g, '');
-          document.getElementById('visit-count').textContent = last;
-        }
-      })
-      .catch(() => { document.getElementById('visit-count').textContent = '—'; });
-  </script>
 </footer>
 
 <style>
