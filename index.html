@@ -736,6 +736,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué formatos están disponibles los libros?",
+      "acceptedAnswer": {"@type": "Answer", "text": "La mayoría de títulos están en Kindle y tapa blanda; algunos también en tapa dura. Cada ficha de Amazon muestra los formatos disponibles para ese libro en concreto."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay envío físico de los libros en papel?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Sí, las ediciones en tapa blanda y tapa dura se compran y envían directamente a través de Amazon."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo contacto para un encargo de producción editorial o Retrato de Papel?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A través del formulario de contacto en la sección de Servicios de la web, o desde la página de Retrato de Papel para libros personalizados."}
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué idiomas están publicados los libros?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Español, inglés y portugués, según el título."}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1282,6 +1310,35 @@
   </div>
 </section>
 
+<section class="faq-home reveal" style="padding:70px 0;background:var(--surface);border-top:1px solid var(--line);">
+  <div class="wrap" style="max-width:720px;">
+    <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:26px;text-align:center;margin:0 0 40px;">Preguntas frecuentes</h2>
+    <div style="display:flex;flex-direction:column;">
+
+      <div style="border-bottom:1px solid var(--line);padding:20px 0;">
+        <h3 style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:0 0 8px;">¿En qué formatos están disponibles los libros?</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65;">La mayoría de títulos están en Kindle y tapa blanda; algunos también en tapa dura. Cada ficha de Amazon muestra los formatos disponibles para ese libro en concreto.</p>
+      </div>
+
+      <div style="border-bottom:1px solid var(--line);padding:20px 0;">
+        <h3 style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:0 0 8px;">¿Hay envío físico de los libros en papel?</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65;">Sí — las ediciones en tapa blanda y tapa dura se compran y envían directamente a través de Amazon, con su logística y plazos habituales.</p>
+      </div>
+
+      <div style="border-bottom:1px solid var(--line);padding:20px 0;">
+        <h3 style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:0 0 8px;">¿Cómo contacto para un encargo de producción editorial o Retrato de Papel?</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65;">A través del formulario de esta misma página en la sección "Servicios", o desde la página de <a href="retrato-de-papel.html" style="color:var(--accent);">Retrato de Papel</a> si es un libro personalizado. Respondo personalmente a cada mensaje.</p>
+      </div>
+
+      <div style="padding:20px 0;">
+        <h3 style="font-family:'Fraunces',serif;font-size:16px;font-weight:600;margin:0 0 8px;">¿En qué idiomas están publicados los libros?</h3>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65;">Español, inglés y portugués, según el título — se indica el idioma en cada edición dentro de su tarjeta del catálogo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <footer>
   <a class="brand" href="#top">
     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;">
@@ -1324,6 +1381,14 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<a href="#top" id="back-to-top" aria-label="Volver arriba" style="position:fixed;bottom:24px;right:24px;width:46px;height:46px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;box-shadow:0 6px 20px rgba(28,26,22,.25);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:50;">↑</a>
+<script>
+  var btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 600) { btt.style.opacity = '1'; btt.style.pointerEvents = 'auto'; }
+    else { btt.style.opacity = '0'; btt.style.pointerEvents = 'none'; }
+  });
 </script>
 </body>
 </html>
