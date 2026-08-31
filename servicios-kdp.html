@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios de producción editorial KDP — Jam Wolf</title>
+<meta name="description" content="Maquetación, EPUB, portada, corrección y metadatos para Amazon KDP. Sin errores, sin sorpresas. Presupuesto claro antes de empezar. Desde 30€.">
+<link rel="canonical" href="https://jamwolfbooks.com/servicios-kdp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Servicios KDP — Jam Wolf">
+<meta property="og:description" content="Producción editorial profesional para autopublicación en Amazon KDP. Sin errores, sin sorpresas.">
+<meta property="og:url" content="https://jamwolfbooks.com/servicios-kdp">
+<meta property="og:image" content="https://jamwolfbooks.com/covers/wolf-ethic-ii.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="theme-color" content="#9A2B1E">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF7F1;
+    --surface:#FFFFFF;
+    --ink:#1C1A16;
+    --ink-soft:#6B655C;
+    --accent:#9A2B1E;
+    --accent-soft:#F3E4E0;
+    --line:#E9E2D3;
+    --gold:#AD8A55;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;}
+
+  /* NAV */
+  header.site{
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+    position:sticky;top:0;z-index:20;
+  }
+  .site-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand-name{
+    font-family:'Fraunces',serif;font-weight:700;font-size:20px;
+    letter-spacing:0.02em;
+  }
+  nav.site-nav{display:flex;gap:28px;}
+  nav.site-nav a{
+    font-size:13.5px;font-weight:500;text-decoration:none;color:var(--ink-soft);
+    transition:color .15s;
+  }
+  nav.site-nav a:hover,nav.site-nav a.active{color:var(--accent);}
+
+  /* HERO */
+  .page-hero{
+    padding:72px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .page-hero .wrap{max-width:720px;margin:0 auto;padding:0 32px;}
+  .page-hero .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;font-weight:700;letter-spacing:0.1em;
+    color:var(--accent);text-transform:uppercase;
+    margin-bottom:20px;
+  }
+  .page-hero h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.1;margin:0 0 24px;
+    letter-spacing:-0.01em;
+  }
+  .page-hero h1 em{color:var(--accent);font-style:italic;font-weight:500;}
+  .page-hero .bajada{
+    font-size:17px;color:var(--ink-soft);line-height:1.75;
+    max-width:620px;margin:0 0 32px;
+  }
+  .page-hero .bajada strong{color:var(--ink);font-weight:600;}
+
+  /* PROMESA */
+  .promesa{
+    background:var(--accent-soft);
+    border-left:3px solid var(--accent);
+    padding:20px 24px;
+    margin-top:8px;
+    font-size:15px;
+    line-height:1.7;
+    color:var(--ink);
+    max-width:600px;
+  }
+
+  /* SERVICIOS */
+  .servicios-section{padding:64px 0;}
+  .servicios-section .wrap{max-width:720px;margin:0 auto;padding:0 32px;}
+
+  .seccion-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;font-weight:700;letter-spacing:0.1em;
+    color:var(--gold);text-transform:uppercase;
+    margin-bottom:40px;
+  }
+
+  .servicio-item{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:6px 24px;
+    padding:32px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .servicio-item:last-child{border-bottom:1px solid var(--line);}
+
+  .servicio-item h3{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:19px;margin:0 0 8px;
+    grid-column:1;
+  }
+  .servicio-item p{
+    font-size:14.5px;color:var(--ink-soft);
+    line-height:1.75;margin:0;
+    grid-column:1;max-width:520px;
+  }
+  .servicio-item .precio{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;font-weight:700;
+    color:var(--accent);
+    white-space:nowrap;
+    grid-column:2;grid-row:1;
+    text-align:right;padding-top:4px;
+  }
+
+  /* COMO TRABAJO */
+  .como-section{
+    background:var(--surface);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:56px 0;
+  }
+  .como-section .wrap{max-width:720px;margin:0 auto;padding:0 32px;}
+  .como-section h2{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:24px;margin:0 0 28px;
+  }
+  .como-lista{
+    display:flex;flex-direction:column;gap:14px;
+    list-style:none;padding:0;margin:0;
+  }
+  .como-lista li{
+    display:flex;gap:14px;
+    font-size:15px;color:var(--ink-soft);
+    align-items:flex-start;
+  }
+  .como-lista li::before{
+    content:"—";
+    color:var(--accent);
+    font-weight:700;
+    flex-shrink:0;
+    margin-top:1px;
+  }
+
+  /* GUIA */
+  .guia-section{padding:48px 0;}
+  .guia-section .wrap{max-width:720px;margin:0 auto;padding:0 32px;}
+  .guia-box{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:28px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .guia-box .gtexto h3{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:16px;margin:0 0 4px;
+  }
+  .guia-box .gtexto p{
+    font-size:13.5px;color:var(--ink-soft);margin:0;
+  }
+  .guia-box a.btn-pdf{
+    font-size:13px;font-weight:600;
+    background:var(--accent);color:#fff;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:6px;
+    white-space:nowrap;
+    transition:opacity .15s;
+  }
+  .guia-box a.btn-pdf:hover{opacity:0.88;}
+
+  /* CONTACTO */
+  .contacto-section{padding:64px 0 80px;}
+  .contacto-section .wrap{max-width:720px;margin:0 auto;padding:0 32px;}
+  .contacto-section h2{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:28px;margin:0 0 8px;
+  }
+  .contacto-section .sub{
+    font-size:15px;color:var(--ink-soft);margin:0 0 36px;
+  }
+
+  .form-grid{display:flex;flex-direction:column;gap:20px;}
+
+  .campo label{
+    display:block;font-size:12.5px;font-weight:600;
+    color:var(--ink-soft);margin-bottom:6px;
+    letter-spacing:0.03em;
+  }
+  .campo input,
+  .campo select,
+  .campo textarea{
+    width:100%;
+    background:var(--surface);
+    border:1.5px solid var(--line);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    padding:12px 14px;
+    outline:none;
+    border-radius:8px;
+    transition:border-color .15s;
+    appearance:none;
+  }
+  .campo input:focus,
+  .campo select:focus,
+  .campo textarea:focus{border-color:var(--accent);}
+  .campo textarea{resize:vertical;min-height:110px;}
+
+  .campo-oculto{display:none;}
+
+  .btn-submit{
+    font-family:'Inter',sans-serif;
+    font-size:15px;font-weight:600;
+    background:var(--accent);color:#fff;
+    border:none;padding:14px 32px;
+    border-radius:8px;cursor:pointer;
+    transition:opacity .15s;
+    align-self:flex-start;
+  }
+  .btn-submit:hover{opacity:0.88;}
+
+  .nota-form{font-size:13px;color:var(--ink-soft);margin:0;}
+
+  /* FOOTER */
+  footer.site-foot{
+    border-top:1px solid var(--line);
+    padding:24px 0;
+    background:var(--surface);
+  }
+  footer.site-foot .wrap{
+    max-width:1200px;margin:0 auto;padding:0 32px;
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:12px;
+  }
+  footer.site-foot p{
+    font-size:12.5px;color:var(--ink-soft);margin:0;
+  }
+  footer.site-foot a{
+    color:var(--ink-soft);text-decoration:none;
+    transition:color .15s;
+  }
+  footer.site-foot a:hover{color:var(--accent);}
+
+  /* RESPONSIVE */
+  @media(max-width:640px){
+    .servicio-item{grid-template-columns:1fr;}
+    .servicio-item .precio{grid-column:1;grid-row:auto;text-align:left;margin-bottom:4px;}
+    nav.site-nav{gap:16px;overflow-x:auto;}
+    .guia-box{flex-direction:column;align-items:flex-start;}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-bar">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 34 34" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17" cy="17" r="17" fill="#FBF3E7"/>
+        <path d="M17 6 L22 14 L28 12 L24 19 L28 22 L17 28 L6 22 L10 19 L6 12 L12 14 Z" fill="#9A2B1E"/>
+      </svg>
+      <span class="brand-name">JAM WOLF</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/">Catálogo</a>
+      <a href="/blog/">Blog</a>
+      <a href="/servicios-kdp" class="active">Servicios</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Producción editorial KDP</p>
+    <h1>Tu libro merece llegar<br>a Amazon <em>sin romperse.</em></h1>
+    <p class="bajada">
+      Subí mi primer manuscrito a KDP pensando que lo había hecho bien.
+      Llegó roto — palabras cortadas, capítulos que desaparecían, la portada
+      rechazada dos veces. <strong>Aprendí el proceso por las malas</strong>,
+      y desde entonces cada archivo que entrego pasa una verificación exacta
+      antes de declararse listo.
+    </p>
+    <blockquote class="promesa">
+      Presupuesto claro antes de empezar. Vista previa gratuita del resultado.
+      Solo pagas cuando ves que está bien.
+    </blockquote>
+  </div>
+</section>
+
+<section class="servicios-section">
+  <div class="wrap">
+    <p class="seccion-label">Qué puedo hacer por tu libro</p>
+
+    <div class="servicio-item">
+      <h3>Producción técnica completa</h3>
+      <p>Tu manuscrito convertido en PDF y EPUB listos para subir a KDP, con portada incluida. Verificación de palabras y capítulos garantizada. Recibes los dos archivos que Amazon necesita, sin tocar código ni configurar nada.</p>
+      <span class="precio">Desde 80€</span>
+    </div>
+
+    <div class="servicio-item">
+      <h3>Corrección y revisión</h3>
+      <p>Ortografía, gramática y coherencia del texto con seguimiento de cambios claro. Ves exactamente qué se modificó y por qué. Sin reescribir tu voz.</p>
+      <span class="precio">Desde 0,015€/palabra</span>
+    </div>
+
+    <div class="servicio-item">
+      <h3>Sinopsis y contraportada</h3>
+      <p>El texto que decide si alguien compra tu libro o sigue navegando. Una sinopsis mal escrita entierra libros que merecen venderse.</p>
+      <span class="precio">Desde 40€</span>
+    </div>
+
+    <div class="servicio-item">
+      <h3>Keywords y metadatos KDP</h3>
+      <p>Las siete palabras clave de Amazon marcan la diferencia entre aparecer en búsquedas o ser invisible. Investigo las que tienen tráfico real en tu categoría.</p>
+      <span class="precio">Desde 30€</span>
+    </div>
+
+    <div class="servicio-item">
+      <h3>Libro personalizado de regalo</h3>
+      <p>Una historia donde el protagonista es alguien real: tu padre, tu pareja, un amigo. En PDF, o impreso y enviado a casa.</p>
+      <span class="precio">Desde 90€</span>
+    </div>
+
+    <div class="servicio-item">
+      <h3>A medida</h3>
+      <p>Ghostwriting completo, cartas personalizadas, textos para empresas, adaptaciones a otros idiomas. Cada proyecto se presupuesta por separado.</p>
+      <span class="precio">Consulta</span>
+    </div>
+  </div>
+</section>
+
+<section class="como-section">
+  <div class="wrap">
+    <h2>Cómo trabajo</h2>
+    <ul class="como-lista">
+      <li>Trabajo en solitario — cada encargo pasa por mis manos de principio a fin</li>
+      <li>Presupuesto exacto antes de empezar, sin letra pequeña</li>
+      <li>Vista previa gratuita del resultado antes de que pagues</li>
+      <li>Solo pagas cuando ves que está bien</li>
+      <li>Respondo personalmente a cada mensaje, normalmente en 24-48h</li>
+    </ul>
+  </div>
+</section>
+
+<section class="guia-section">
+  <div class="wrap">
+    <div class="guia-box">
+      <div class="gtexto">
+        <h3>Guía gratuita</h3>
+        <p>7 errores que rompen un EPUB en KDP — y cómo evitarlos antes de subir.</p>
+      </div>
+      <a class="btn-pdf" href="/guia_7_errores_epub.pdf" target="_blank" rel="noopener">Descargar gratis</a>
+    </div>
+  </div>
+</section>
+
+<section class="contacto-section" id="contacto">
+  <div class="wrap">
+    <h2>Cuéntame tu proyecto</h2>
+    <p class="sub">Respondo personalmente. Sin bots, sin plantillas.</p>
+
+    <form class="form-grid" name="servicios-kdp" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="servicios-kdp">
+      <div class="campo campo-oculto">
+        <label>No rellenar: <input name="bot-field"></label>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="name">
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="campo">
+        <label for="servicio">Servicio que te interesa</label>
+        <select id="servicio" name="servicio" required>
+          <option value="" disabled selected>Selecciona…</option>
+          <option value="produccion-completa">Producción técnica completa</option>
+          <option value="correccion">Corrección y revisión</option>
+          <option value="sinopsis">Sinopsis y contraportada</option>
+          <option value="keywords">Keywords y metadatos KDP</option>
+          <option value="regalo">Libro personalizado de regalo</option>
+          <option value="medida">A medida / otro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="proyecto">Cuéntame brevemente tu proyecto</label>
+        <textarea id="proyecto" name="proyecto" placeholder="Género, extensión aproximada, en qué punto estás…"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar consulta</button>
+      <p class="nota-form">Respondo en 24-48h. Sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Jam Wolf · Catálogo completo en <a href="/">jamwolfbooks.com</a></p>
+    <p><a href="/legal">Aviso legal · Privacidad · Condiciones</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
