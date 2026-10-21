@@ -806,6 +806,8 @@
   ]
 }
 </script>
+<!-- Estadísticas sin cookies (Umami Cloud, UE) -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="36a901d6-0ad2-4992-b4cd-fb22c3c310a5"></script>
 </head>
 <body>
 
@@ -1445,6 +1447,19 @@
     if (window.scrollY > 600) { btt.style.opacity = '1'; btt.style.pointerEvents = 'auto'; }
     else { btt.style.opacity = '0'; btt.style.pointerEvents = 'none'; }
   });
+</script>
+<!-- Medición de clics de compra: libro, formato, idioma y tienda (sin datos personales) -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="amazon."]'); if(!a||!window.umami) return;
+  var card=a.closest('.card'), t=card&&card.querySelector('.card-title'), txt=a.textContent||'';
+  window.umami.track('compra',{
+    libro:t?t.textContent.trim():'(sin ficha)',
+    formato:/dura/i.test(txt)?'Tapa dura':(/tapa/i.test(txt)?'Tapa blanda':'Kindle'),
+    idioma:(a.querySelector('.lang')||{}).textContent||'',
+    tienda:(a.hostname||'').replace('www.','')
+  });
+});
 </script>
 </body>
 </html>
